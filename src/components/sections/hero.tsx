@@ -45,8 +45,9 @@ const HeroSection = () => {
 
             {/* Main Heading */}
             <BlurIn delay={0.4}>
-              <h1 className="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-white mb-4">
-                SAHADAT <span className="gold-gradient-text">BUXI</span>
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-4 leading-[1.05]">
+                SAHADAT<br />
+                <span className="gold-gradient-text">BUXI</span>
               </h1>
             </BlurIn>
 

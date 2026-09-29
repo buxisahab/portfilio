@@ -13,14 +13,10 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { name: "About", href: "/#about", id: "about" },
-  { name: "What I Build", href: "/#what-i-build", id: "what-i-build" },
-  { name: "Tech Stack", href: "/#skills", id: "skills" },
   { name: "Projects", href: "/#projects", id: "projects" },
-  { name: "Autonomous", href: "/#drone-systems", id: "drone-systems" },
-  { name: "Mobile", href: "/#mobile-dev", id: "mobile-dev" },
+  { name: "Tech Stack", href: "/#skills", id: "skills" },
   { name: "Credentials", href: "/#credentials", id: "credentials" },
   { name: "Achievements", href: "/#achievements", id: "achievements" },
-  { name: "Process", href: "/#process", id: "process" },
   { name: "Contact", href: "/#contact", id: "contact" },
 ];
 
@@ -64,39 +60,34 @@ const Header = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-[100] transition-all duration-300 pointer-events-auto",
         isScrolled
-          ? "bg-[#050505]/90 backdrop-blur-md border-b border-zinc-800/80 shadow-xl shadow-black/50 py-3"
-          : "bg-transparent py-5"
+          ? "bg-[#050505]/95 backdrop-blur-md border-b border-zinc-800/80 shadow-lg shadow-black/60 py-2"
+          : "bg-[#050505]/60 backdrop-blur-sm py-2.5"
       )}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Brand Logo */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3">
+        {/* Brand Logo - strictly 1 line */}
         <Link
           href="/#hero"
           onClick={() => setIsMobileMenuOpen(false)}
-          className="flex items-center gap-2.5 group cursor-pointer"
+          className="flex items-center gap-2.5 group cursor-pointer shrink-0"
         >
-          <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden border-2 border-gold/70 shadow-md shadow-gold/20 group-hover:scale-105 group-hover:border-gold transition-all shrink-0 bg-zinc-900">
+          <div className="relative w-8 h-8 rounded-full overflow-hidden border-[1.5px] border-gold/80 shadow-sm shadow-gold/20 group-hover:scale-105 group-hover:border-gold transition-all shrink-0 bg-zinc-900">
             <Image
               src="/logo.webp"
               alt="Sahadat Buxi"
-              width={40}
-              height={40}
+              width={32}
+              height={32}
               className="w-full h-full object-cover object-top"
               priority
             />
           </div>
-          <div className="flex flex-col">
-            <span className="font-extrabold tracking-wide text-base sm:text-lg text-white group-hover:text-gold transition-colors">
-              SAHADAT <span className="gold-gradient-text">BUXI</span>
-            </span>
-            <span className="text-[10px] font-mono text-zinc-400 -mt-1 hidden sm:block">
-              Software & Autonomous Systems
-            </span>
-          </div>
+          <span className="font-extrabold tracking-wider text-sm sm:text-base text-white group-hover:text-gold transition-colors whitespace-nowrap inline-flex items-center gap-1.5">
+            SAHADAT <span className="gold-gradient-text">BUXI</span>
+          </span>
         </Link>
 
-        {/* Desktop Navigation Links */}
-        <nav className="hidden xl:flex items-center gap-1 bg-zinc-950/70 p-1.5 rounded-2xl border border-zinc-800/80 backdrop-blur-md">
+        {/* Desktop Navigation Links - slim pill */}
+        <nav className="hidden lg:flex items-center gap-0.5 bg-zinc-950/80 p-1 rounded-xl border border-zinc-800/80 backdrop-blur-md">
           {navLinks.map((link) => {
             const isActive = activeSection === link.id;
             return (
@@ -104,10 +95,10 @@ const Header = () => {
                 key={link.name}
                 href={link.href}
                 className={cn(
-                  "px-3 py-1.5 rounded-xl text-xs font-mono transition-all",
+                  "px-3 py-1 rounded-lg text-xs font-mono font-medium transition-all whitespace-nowrap",
                   isActive
-                    ? "gold-gradient-bg text-black font-semibold shadow-sm shadow-gold/20"
-                    : "text-zinc-400 hover:text-white hover:bg-zinc-900/80"
+                    ? "gold-gradient-bg text-black font-bold shadow-sm shadow-gold/20"
+                    : "text-zinc-400 hover:text-white hover:bg-zinc-900/60"
                 )}
               >
                 {link.name}
@@ -116,40 +107,29 @@ const Header = () => {
           })}
         </nav>
 
-        {/* Right Action Buttons */}
-        <div className="flex items-center gap-3">
+        {/* Right Action Buttons - slim buttons */}
+        <div className="flex items-center gap-2 shrink-0">
           <a
             href={config.social.github}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub Profile"
-            className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:border-gold/40 text-xs font-mono transition-colors"
+            className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-zinc-900/90 border border-zinc-800 text-zinc-300 hover:text-white hover:border-gold/40 text-xs font-mono transition-colors whitespace-nowrap h-8"
           >
             <SiGithub className="w-3.5 h-3.5 text-gold" />
             <span>GitHub</span>
           </a>
 
-          <a
-            href={config.social.whatsapp}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp"
-            className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-gold hover:border-gold/40 text-xs font-mono transition-colors"
-          >
-            <FaWhatsapp className="w-3.5 h-3.5 text-green-500" />
-            <span>Chat</span>
-          </a>
-
           <Link href="/#contact" className="hidden sm:inline-block">
-            <Button className="h-9 px-4 rounded-xl gold-gradient-bg text-black font-semibold text-xs hover:scale-105 transition-all shadow-md shadow-gold/20 cursor-pointer">
-              Contact Me
+            <Button className="h-8 px-3.5 rounded-lg gold-gradient-bg text-black font-semibold text-xs hover:scale-105 transition-all shadow-sm shadow-gold/20 cursor-pointer whitespace-nowrap">
+              Contact
             </Button>
           </Link>
 
           {/* Mobile Menu Toggle Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="p-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-gold hover:border-gold/40 xl:hidden transition-colors cursor-pointer"
+            className="p-1.5 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-gold hover:border-gold/40 lg:hidden transition-colors cursor-pointer h-8 w-8 flex items-center justify-center"
             aria-label="Toggle navigation menu"
           >
             {isMobileMenuOpen ? (
