@@ -87,7 +87,7 @@ const HeroSection = () => {
 
               <BoxReveal delay={1.2} width="fit-content">
                 <a
-                  href="/resume.pdf"
+                  href="/assets/resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   download="Shahadat_Husain_Resume.pdf"

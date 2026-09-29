@@ -43,7 +43,7 @@ const CertificationsSection = () => {
         </div>
 
         <a
-          href="/resume.pdf"
+          href="/assets/resume.pdf"
           download="Shahadat_Husain_Sahadat_Buxi_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"

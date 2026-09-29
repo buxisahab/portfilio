@@ -39,7 +39,7 @@ const config = {
   email: "sahadatbuxi@gmail.com",
   phone: "+91 9771204171",
   location: "New Delhi",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/assets/resume.pdf",
   site: "https://sahadatbuxi.dev",
 
   githubUsername: "buxisahab",
