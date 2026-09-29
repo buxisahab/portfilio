@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { config } from "@/data/config";
 import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
@@ -17,6 +18,7 @@ const navLinks = [
   { name: "Projects", href: "/#projects", id: "projects" },
   { name: "Autonomous", href: "/#drone-systems", id: "drone-systems" },
   { name: "Mobile", href: "/#mobile-dev", id: "mobile-dev" },
+  { name: "Credentials", href: "/#credentials", id: "credentials" },
   { name: "Achievements", href: "/#achievements", id: "achievements" },
   { name: "Process", href: "/#process", id: "process" },
   { name: "Contact", href: "/#contact", id: "contact" },
@@ -73,8 +75,15 @@ const Header = () => {
           onClick={() => setIsMobileMenuOpen(false)}
           className="flex items-center gap-2.5 group cursor-pointer"
         >
-          <div className="w-9 h-9 rounded-xl bg-gold/10 border border-gold/40 flex items-center justify-center text-gold font-mono font-bold text-sm shadow-sm group-hover:scale-105 group-hover:border-gold transition-all">
-            SB
+          <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden border-2 border-gold/70 shadow-md shadow-gold/20 group-hover:scale-105 group-hover:border-gold transition-all shrink-0 bg-zinc-900">
+            <Image
+              src="/logo.webp"
+              alt="Sahadat Buxi"
+              width={40}
+              height={40}
+              className="w-full h-full object-cover object-top"
+              priority
+            />
           </div>
           <div className="flex flex-col">
             <span className="font-extrabold tracking-wide text-base sm:text-lg text-white group-hover:text-gold transition-colors">

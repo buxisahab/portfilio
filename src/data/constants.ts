@@ -630,6 +630,111 @@ export const ACHIEVEMENTS: Achievement[] = [
   }
 ];
 
+export type Certification = {
+  id: number;
+  title: string;
+  issuer: string;
+  credentialId?: string;
+  issueDate?: string;
+  badge: string;
+  description: string;
+  skills: string[];
+};
+
+export const CERTIFICATIONS: Certification[] = [
+  {
+    id: 1,
+    title: "Google Certified Associate Android Developer — Flutter",
+    issuer: "Google Developers",
+    credentialId: "#194637",
+    badge: "Google Certified",
+    description: "Demonstrated proficiency in building production-grade mobile applications with Flutter, state management, native platform bridges, and performant UI architectures.",
+    skills: ["Flutter", "Dart", "Android", "Cross-Platform", "State Management"]
+  },
+  {
+    id: 2,
+    title: "Google Certified Associate Android Developer — Kotlin",
+    issuer: "Google Developers",
+    credentialId: "#571394",
+    badge: "Google Certified",
+    description: "Validated advanced competencies in Kotlin coroutines, modern Android architecture (MVVM/MVI), Jetpack libraries, and reactive application development.",
+    skills: ["Kotlin", "Android SDK", "Jetpack", "Coroutines", "Room"]
+  },
+  {
+    id: 3,
+    title: "Google Certified Associate Android Developer — Java",
+    issuer: "Google Developers",
+    credentialId: "#268416",
+    badge: "Google Certified",
+    description: "Certified deep foundation in native Java Android development, threading, memory optimization, lifecycle management, and enterprise app stability.",
+    skills: ["Java", "Android SDK", "OOP", "Concurrency", "Services"]
+  },
+  {
+    id: 4,
+    title: "Google Certified Mobile Web Specialist",
+    issuer: "Google Developers",
+    credentialId: "#115139",
+    badge: "Google Certified",
+    description: "Demonstrated expertise in responsive web design, progressive web apps (PWAs), performance auditing, caching, and modern web APIs.",
+    skills: ["PWA", "JavaScript", "Web APIs", "Performance", "HTML5/CSS3"]
+  },
+  {
+    id: 5,
+    title: "Instagram Insider: Program by Meta",
+    issuer: "Meta / Instagram",
+    badge: "Meta Program",
+    description: "Selected participant exploring creator ecosystems, algorithmic content distribution, developer APIs, and social media technology landscapes.",
+    skills: ["Meta APIs", "Social Graph", "Creator Tech", "Digital Distribution"]
+  }
+];
+
+export type Education = {
+  id: number;
+  degree: string;
+  institution: string;
+  location: string;
+  period: string;
+  field: string;
+  details?: string[];
+};
+
+export const EDUCATION: Education[] = [
+  {
+    id: 1,
+    degree: "Bachelor of Engineering (B.E.)",
+    institution: "Ganga Institute of Technology and Management",
+    location: "Delhi NCR, India",
+    period: "2024 – 2028",
+    field: "Computer Science & Engineering",
+    details: [
+      "Rigorous core curriculum in algorithms, data structures, computer architecture, and distributed systems",
+      "Active technology builder leading hackathon prototypes in autonomous robotics and AI"
+    ]
+  },
+  {
+    id: 2,
+    degree: "Intermediate (12th Grade)",
+    institution: "Vanijya Inter College",
+    location: "Bihar, India",
+    period: "2022 – 2024",
+    field: "Higher Secondary Education",
+    details: [
+      "Strengthened quantitative, mathematical, and logical reasoning foundational for software engineering"
+    ]
+  },
+  {
+    id: 3,
+    degree: "Matriculation (10th Grade)",
+    institution: "Uchch Madhyamik Vidyalaya Aurai",
+    location: "Bihar, India",
+    period: "2021 – 2022",
+    field: "Secondary School Examination",
+    details: [
+      "Solid academic foundation with early passion for computers, programming, and electronics"
+    ]
+  }
+];
+
 export type Experience = {
   id: number;
   startDate: string;
@@ -643,17 +748,19 @@ export type Experience = {
 export const EXPERIENCE: Experience[] = [
   {
     id: 1,
-    startDate: "2023",
+    startDate: "2022",
     endDate: "Present",
     title: "Independent Software Developer & Tech Entrepreneur",
     company: "Autonomous & Software Product Builds",
     description: [
       "Initiated independent software development journey building multi-domain digital products, mobile apps, and autonomous hardware-software systems.",
       "Engineered AVIRON — an autonomous emergency response drone system featuring AI vision, telemetry, and payload delivery.",
-      "Developed AI Music (Buxi Music), an Android audio processing & discovery platform built with Kotlin and custom DSP pipelines.",
+      "Created Buxi AI — an intelligent voice assistant & workflow automation mobile app built with Flutter and custom NLP pipelines.",
+      "Developed AI Music (Buxi Music), an Android audio processing & discovery platform built with Kotlin and custom DSP audio pipelines.",
+      "Architected Remote Android Control Dashboard and Secure Licensing anti-tamper security frameworks.",
       "Built B Educational Consultancy web platform for student admissions, leads, and college management workflows.",
     ],
-    skills: ["Java", "Kotlin", "Python", "Flutter", "Firebase", "Pixhawk", "TensorFlow Lite"],
+    skills: ["Java", "Kotlin", "Python", "Flutter", "Firebase", "Pixhawk", "TensorFlow Lite", "WebRTC"],
   },
   {
     id: 2,

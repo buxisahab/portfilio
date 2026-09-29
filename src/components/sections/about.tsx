@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import SectionWrapper from "../ui/section-wrapper";
 import { SectionHeader } from "./section-header";
 import { motion } from "framer-motion";
@@ -47,13 +48,22 @@ const AboutSection = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 rounded-xl bg-gold/10 text-gold border border-gold/30">
-              <Terminal className="w-6 h-6" />
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
+            <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border-2 border-gold shadow-lg shadow-gold/20 shrink-0 bg-zinc-900">
+              <Image
+                src="/logo.webp"
+                alt="Shahadat Husain (Sahadat Buxi)"
+                width={80}
+                height={80}
+                className="w-full h-full object-cover object-top"
+              />
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-white">Multidisciplinary Technology Builder</h3>
-              <p className="text-xs text-gold font-mono">Developer & Innovator Since 2023</p>
+              <h3 className="text-2xl font-bold text-white flex items-center gap-2">
+                Shahadat Husain
+              </h3>
+              <p className="text-xs sm:text-sm text-gold font-mono font-medium">Independent Software Developer & Entrepreneur</p>
+              <p className="text-[11px] text-zinc-400 font-mono">Brand Name: Sahadat Buxi • Active Since 2022</p>
             </div>
           </div>
 

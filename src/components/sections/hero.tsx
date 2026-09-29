@@ -86,13 +86,14 @@ const HeroSection = () => {
 
               <BoxReveal delay={1.2} width="fit-content">
                 <a
-                  href="https://drive.google.com/file/d/1Actmr8kic9rne7I88shEdT0r0cYMHL9O/view?usp=sharing"
+                  href="/resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
+                  download="Shahadat_Husain_Resume.pdf"
                 >
                   <Button variant="ghost" className="h-12 px-5 rounded-xl border border-zinc-800 text-zinc-300 hover:text-white hover:bg-zinc-900 transition-all flex items-center gap-2 cursor-pointer">
-                    <FileText className="w-4 h-4 text-zinc-400" />
-                    <span>Resume</span>
+                    <FileText className="w-4 h-4 text-gold" />
+                    <span>Download Resume</span>
                   </Button>
                 </a>
               </BoxReveal>

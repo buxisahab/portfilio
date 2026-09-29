@@ -14,6 +14,7 @@ import MobileDevSection from "@/components/sections/mobile-dev";
 import AiMlSection from "@/components/sections/ai-ml";
 import GameDevSection from "@/components/sections/game-dev";
 import AchievementsSection from "@/components/sections/achievements";
+import CertificationsSection from "@/components/sections/certifications";
 import ExperienceSection from "@/components/sections/experience";
 import ProcessSection from "@/components/sections/process";
 import ContactSection from "@/components/sections/contact";
@@ -64,6 +65,7 @@ function MainPage() {
         <AiMlSection />
         <GameDevSection />
         <AchievementsSection />
+        <CertificationsSection />
         <ExperienceSection />
         <ProcessSection />
         <ContactSection />

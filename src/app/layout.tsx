@@ -49,11 +49,11 @@ export const metadata: Metadata = {
   publisher: config.author,
   icons: {
     icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon.png", type: "image/png" },
+      { url: "/favicon.webp", type: "image/webp" },
+      { url: "/logo.webp", type: "image/webp" },
     ],
-    shortcut: "/favicon.svg",
-    apple: "/favicon.png",
+    shortcut: "/favicon.webp",
+    apple: "/logo.webp",
   },
 };
 

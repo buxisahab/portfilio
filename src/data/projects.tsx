@@ -28,6 +28,37 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
+    id: "buxi-ai",
+    name: "Buxi AI",
+    tagline: "Intelligent Voice Assistant & Workflow Automation System",
+    category: "Mobile",
+    additionalCategories: ["AI/ML"],
+    description:
+      "An intelligent voice assistant and personal productivity application built with Flutter, integrating speech recognition, custom NLP intent parsing, device automation, and conversational AI capabilities.",
+    technologies: [
+      "Flutter",
+      "Dart",
+      "Speech-to-Text",
+      "TTS Engine",
+      "NLP",
+      "Firebase",
+      "Android Intents",
+      "REST APIs"
+    ],
+    features: [
+      "Voice-driven task execution and device automations",
+      "Offline speech recognition and NLP intent classification",
+      "Dynamic conversational voice synthesis (TTS)",
+      "Custom hotword activation and quick command workflows",
+      "Cross-platform responsiveness and clean modern interface"
+    ],
+    status: "Flagship Project",
+    gradient: ["#D4AF37", "#1A1A1A"],
+    githubUrl: "https://github.com/buxisahab/Buxi-AI-Assistant",
+    demoUrl: "#",
+    featured: true
+  },
+  {
     id: "aviron",
     name: "AVIRON",
     tagline: "Autonomous Virtual Innovative Rescue for Operations in Natural-disasters",
@@ -270,8 +301,67 @@ export const PROJECTS: Project[] = [
     ],
     status: "Experimental Project",
     gradient: ["#EAB308", "#050505"],
-    githubUrl: "https://github.com/sahadatbuxi/Edge-Vision-Engine",
+    githubUrl: "https://github.com/buxisahab/Edge-Vision-Engine",
     demoUrl: "#",
     featured: false
+  },
+  {
+    id: "remote-android-control",
+    name: "Remote Android Control Dashboard",
+    tagline: "Non-Rooted Android Fleet Administration & Teleoperation Platform",
+    category: "Web",
+    additionalCategories: ["Mobile"],
+    description:
+      "A comprehensive remote management platform enabling real-time teleoperation, device status monitoring, file operations, and remote input simulation on non-rooted Android devices via WebSocket and Accessibility APIs.",
+    technologies: [
+      "Kotlin",
+      "Android Accessibility API",
+      "WebSocket",
+      "Node.js",
+      "React",
+      "REST APIs",
+      "MediaProjection"
+    ],
+    features: [
+      "Real-time screen mirroring without root requirements",
+      "Bidirectional WebSocket low-latency command protocol",
+      "Remote input dispatch via Android Accessibility Services",
+      "Device teleoperation, battery, network, and storage telemetry",
+      "Secure end-to-end token authorization"
+    ],
+    status: "Completed",
+    gradient: ["#F59E0B", "#050505"],
+    githubUrl: "https://github.com/buxisahab/Remote-Android-Control",
+    demoUrl: "#",
+    featured: true
+  },
+  {
+    id: "secure-licensing-framework",
+    name: "Secure Licensing Framework",
+    tagline: "Anti-Tamper, Dynamic Verification & Smali Code Protection Architecture",
+    category: "Mobile",
+    additionalCategories: ["Experimental"],
+    description:
+      "An advanced Android software protection framework designed to prevent reverse engineering, unauthorized repackaging, Smali bytecode modification, and license cracking.",
+    technologies: [
+      "Android NDK",
+      "C++",
+      "Smali",
+      "Java",
+      "Cryptography",
+      "Signature Verification"
+    ],
+    features: [
+      "Native C++ cryptographic integrity checks via NDK",
+      "APK signature and package hash verification",
+      "Anti-debugging, ptrace detection, and emulator evasion",
+      "Dynamic server-side license verification handshake",
+      "Code obfuscation resilience against decompilation tools"
+    ],
+    status: "Completed",
+    gradient: ["#EF4444", "#050505"],
+    githubUrl: "https://github.com/buxisahab/Secure-Licensing-Framework",
+    demoUrl: "#",
+    featured: true
   }
 ];
