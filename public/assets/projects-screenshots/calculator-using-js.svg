@@ -1,0 +1,20 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#111827"/>
+  <rect x="170" y="70" width="860" height="490" rx="38" fill="#1f2937"/>
+  <rect x="220" y="120" width="760" height="96" rx="18" fill="#030712"/>
+  <text x="930" y="181" text-anchor="end" fill="#f9fafb" font-family="Arial, sans-serif" font-size="54" font-weight="700">12345</text>
+  <g fill="#374151">
+    <rect x="220" y="250" width="150" height="72" rx="16"/>
+    <rect x="410" y="250" width="150" height="72" rx="16"/>
+    <rect x="600" y="250" width="150" height="72" rx="16"/>
+    <rect x="790" y="250" width="190" height="72" rx="16" fill="#f97316"/>
+    <rect x="220" y="352" width="150" height="72" rx="16"/>
+    <rect x="410" y="352" width="150" height="72" rx="16"/>
+    <rect x="600" y="352" width="150" height="72" rx="16"/>
+    <rect x="790" y="352" width="190" height="72" rx="16" fill="#f97316"/>
+    <rect x="220" y="454" width="340" height="72" rx="16"/>
+    <rect x="600" y="454" width="150" height="72" rx="16"/>
+    <rect x="790" y="454" width="190" height="72" rx="16" fill="#f97316"/>
+  </g>
+  <text x="600" y="600" text-anchor="middle" fill="#f9fafb" font-family="Arial, sans-serif" font-size="40" font-weight="700">Calculator Using JS</text>
+</svg>
